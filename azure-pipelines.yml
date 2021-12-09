@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: 'e220ec55-e9b2-4a32-82f2-128d2b70983e'
+  azureSubscription: 'Interview'
 
   # Function app name
   functionAppName: 'hello-vint'
