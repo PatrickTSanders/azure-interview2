@@ -40,7 +40,9 @@
         "allowedValues": [
           "node",
           "dotnet",
-          "java"
+          "java",
+          "python",
+          "powershell"
         ],
         "metadata": {
           "description": "The language worker runtime to load in the function app."
