@@ -4,7 +4,7 @@
     "parameters": {
       "appName": {
         "type": "string",
-        "defaultValue": "[concat('fnapp', uniqueString(resourceGroup().id))]",
+        "defaultValue": "hello-vint",
         "metadata": {
           "description": "The name of the function app that you wish to create."
         }
@@ -66,20 +66,6 @@
         "kind": "Storage"
       },
       {
-        "type": "Microsoft.Web/serverfarms",
-        "apiVersion": "2020-06-01",
-        "name": "[variables('hostingPlanName')]",
-        "location": "[parameters('location')]",
-        "sku": {
-          "name": "Y1",
-          "tier": "Dynamic"
-        },
-        "properties": {
-          "name": "[variables('hostingPlanName')]",
-          "computeMode": "Dynamic"
-        }
-      },
-      {
         "type": "Microsoft.Web/sites",
         "apiVersion": "2020-06-01",
         "name": "[variables('functionAppName')]",
@@ -114,7 +100,8 @@
                 "value": "[variables('functionWorkerRuntime')]"
               }
             ]
-          }
+          },
+        "reserved": true
         }
       },
       {
