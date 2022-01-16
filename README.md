@@ -21,3 +21,5 @@ Welcome to the trials and tribulations of Vint! For this round, we are asking yo
 4. Create a pipeline that builds/re-deploys the Function
 5. Have the pipeline trigger a build on commits from repo
 6. Put pipeline into an ARM template
+
+test PR merge
